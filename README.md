@@ -9,7 +9,9 @@ Basically building a spring-boot application from scratch based on some resource
 
 ## Endpoints
 
-- a;lskdj
+- GET `/simple/test` -> static resonse
+- GET `/simple/hello/{name}` -> dyanmic response with path variable
+- POST `/simple/setProfile` -> dumps "Porfile" JSON to STDOUT
 ```javascript
 fetch('http://localhost:8080/simple/setProfile', {
   method: 'POST',
@@ -20,6 +22,8 @@ fetch('http://localhost:8080/simple/setProfile', {
 .then(data => console.log(data))
 .catch(error => console.error(error));
 ```
+  - later, changed port from 8080 -> 9090
+
 
 ## Inspiration /. Resources
 
