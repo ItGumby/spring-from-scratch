@@ -1,5 +1,12 @@
 package io.github.itgumby;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Profile {
     private String name;
     private String address;
@@ -7,11 +14,6 @@ public class Profile {
     public Profile() {
         super();
     }
-
-    public String getName() { return name; }
-    public void setName(String n) { name = n; }
-    public String getAddress() { return address; }
-    public void setAddress(String a) { address = a; }
 
     @Override
     public String toString() {
