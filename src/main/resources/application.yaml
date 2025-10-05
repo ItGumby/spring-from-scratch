@@ -1,2 +1,4 @@
 server:
     port: 9090
+logging:
+    file.name: "simple.log"

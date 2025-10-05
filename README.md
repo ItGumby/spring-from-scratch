@@ -27,6 +27,12 @@ fetch('http://localhost:8080/simple/setProfile', {
 
 ## Inspiration /. Resources
 
+- pre: git init, gradle init
 - [What is Spring-Boot Framework?](https://www.youtube.com/watch?v=LSEYdU8Dp9Y) 5 min youtube "from scratch"
-  - barest `build.gradle`, SimpleMain.java,
+  - before spring: barest `build.gradle`, SimpleMain.java
+  - spring init: `@SpringBootApplication` on class, `SpringApplication.run(SimpleMain.class, args);` in main method
+  - spring rest: `@RestController public class SimpleController`, methods with `@GetMapping("$path") / @PostMapping("$path")`
+  - spring CDI: `@Service public class ProfileService`, inject via `public SimpleController(ProfileService ps)` constructor
+  - spring auto-config: `src/main/resources/application.yaml`
 - Marco Codes [Hibernate & JPA Tutorial](https://www.youtube.com/watch?v=xHminZ9Dxm4)
+  - ...
