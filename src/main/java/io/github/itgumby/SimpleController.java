@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RestController
 public class SimpleController {
 
+    private final ProfileService profileService;
+    public SimpleController(ProfileService profileService) {
+        this.profileService = profileService;
+    }
+
     @GetMapping("/simple/test")
     public String getString() {
         return "Here is the test string";
@@ -22,20 +27,7 @@ public class SimpleController {
 
     @PostMapping("/simple/setProfile")
     public void receiveData(@RequestBody Profile profile) {
-        System.out.println("received profile: " + profile);
+        profileService.processProfile(profile);
     }
 
-    public static class Profile {
-        private String name;
-        private String address;
-
-        public Profile() {
-            super();
-        }
-
-        public String getName() { return name; }
-        public void setName(String n) { name = n; }
-        public String getAddress() { return address; }
-        public void setAddress(String a) { address = a; }
-    }
 }
