@@ -35,4 +35,5 @@ fetch('http://localhost:8080/simple/setProfile', {
   - spring CDI: `@Service public class ProfileService`, inject via `public SimpleController(ProfileService ps)` constructor
   - spring auto-config: `src/main/resources/application.yaml`
 - Marco Codes [Hibernate & JPA Tutorial](https://www.youtube.com/watch?v=xHminZ9Dxm4)
-  - ...
+  - recommends Manning book "Java Persistence with Hibernate"
+  - JPA mapping: `@Entity, @Id, @GeneratedValue`, optional `@Table, @Column`

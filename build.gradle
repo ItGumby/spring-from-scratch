@@ -16,6 +16,7 @@ dependencies {
 	compileOnly "org.projectlombok:lombok:1.18.42"
 
     implementation 'org.springframework.boot:spring-boot-starter-web:3.5.6'
+    implementation 'org.hibernate:hibernate-core:7.1.2.Final'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.14.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.14.0'
