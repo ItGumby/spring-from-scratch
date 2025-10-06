@@ -50,12 +50,6 @@ public class JPAExampleTest {
     @Test
     void saveMyFirstEntity() {
         URL url = null;
-        // try {
-        //     url = new URI("https://co.milesplit.com/meets/659366-cheyenne-mountain-stampede-pre-state-2025/results/1195884/formatted")
-        //             .toURL();
-        // } catch (Exception ignore) {
-        //     //no-op
-        // }
         Meet meet = new Meet();
         meet.setYear(2025);
         meet.setName("Test Meet");

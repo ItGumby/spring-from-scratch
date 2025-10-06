@@ -43,3 +43,7 @@ secrets.yml
 .git-hooks/
 node_modules
 /.kotlin/
+
+## itgumby modifications
+.env
+.idea
