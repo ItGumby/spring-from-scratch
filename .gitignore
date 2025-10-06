@@ -12,7 +12,7 @@
 .attach_pid*
 .classpath
 .factorypath
-.gradle
+# .gradle
 .metadata
 .project
 .recommenders
