@@ -11,10 +11,6 @@ public class Profile {
     private String name;
     private String address;
 
-    public Profile() {
-        super();
-    }
-
     @Override
     public String toString() {
         return String.format("{name: \"%s\", address: \"%s\"}", name, address);
