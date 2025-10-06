@@ -1,6 +1,5 @@
 package io.github.itgumby;
 
-import java.net.URI;
 import java.net.URL;
 import java.time.LocalDate;
 
