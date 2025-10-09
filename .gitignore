@@ -1,50 +1,41 @@
-*#
-*.jar
-.gradle/*
-*.sw?
-*.log
-*.log.gz
-*~
-.#*
-.*.md.html
-.DS_Store
-.attach_pid*
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
 .classpath
 .factorypath
-.metadata
 .project
-.recommenders
 .settings
 .springBeans
-.vscode
-/code
-MANIFEST.MF
-_site/
-activemq-data
-bin
-build
-!/**/src/**/bin
-!/**/src/**/build
-build.log
-dependency-reduced-pom.xml
-dump.rdb
-interpolated*.xml
-lib/
-manifest.yml
-out
-overridedb.*
-target
-.flattened-pom.xml
-secrets.yml
-.gradletasknamecache
 .sts4-cache
-.git-hooks/
-node_modules
-/.kotlin/
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-## itgumby modifications
-.env
+### IntelliJ IDEA ###
 .idea
+*.iws
 *.iml
 *.ipr
-*.iws
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+## local environment / secrets to keep out
+.env
+*.log
