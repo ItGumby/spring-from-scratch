@@ -37,6 +37,7 @@ public class JPAExampleTest {
             System.out.println("\nEXCEPTION: " + e.getClass().getSimpleName() + "[" + e.getMessage() + "]\n");
             StandardServiceRegistryBuilder.destroy(registry);
         }
+        System.out.println("TEST SET-UP: sessionFactory=" + sessionFactory);
     }
 
     @AfterEach

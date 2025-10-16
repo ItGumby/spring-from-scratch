@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.6'
 }
+// suggestion from https://docs.spring.io/spring-boot/gradle-plugin/getting-started.html
+apply plugin: 'io.spring.dependency-management'
 
 group = 'io.github.itgumby'
 version = '0.1-SNAPSHOT'
@@ -21,32 +23,35 @@ configurations {
 }
 
 repositories {
-    //mavenLocal()
     mavenCentral()
+}
+
+ext {
+    springVersion = '3.5.6'
 }
 
 dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.42'
 	annotationProcessor 'org.projectlombok:lombok:1.18.42'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:3.5.3'
-
+    // where did I get this?
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:3.5.3"
     // support local devtools
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    //developmentOnly "org.springframework.boot:spring-boot-devtools:${springVersion}"
 
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.5.6'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.5.6'
+    implementation "org.springframework.boot:spring-boot-starter:${springVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-web:${springVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}"
     // based on marco-codes suggestions to reduce data-jap dependencies...
     //implementation 'org.hibernate:hibernate-core:7.1.2.Final'
-    //implementation 'com.h2database:h2:2.4.240'
+    implementation 'com.h2database:h2:2.4.240'
+    // baeldung spring-boot-start
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:${springVersion}"
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.5.6'
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springVersion}"
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // per https://docs.gradle.org/current/userguide/java_testing.html#using_junit5
     //testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
     // per https://projectlombok.org/setup/gradle
-	//testCompileOnly 'org.projectlombok:lombok:1.18.42'
-	//testAnnotationProcessor 'org.projectlombok:lombok:1.18.42'
-    //testRuntimeOnly 'com.h2database:h2'
 }
 
 test {

@@ -6,3 +6,4 @@
  */
 
 rootProject.name = 'spring-from-scratch'
+// spring.version=3.5.6
